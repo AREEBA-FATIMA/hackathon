@@ -61,8 +61,8 @@ export default function FeaturedPosts() {
               <Image
                 src={post.image}
                 alt={post.title}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 className="rounded-sm"
               />
               <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold uppercase px-2 py-1 rounded">

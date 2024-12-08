@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="text-center text-gray-500 mt-6">
+        <div className="text-left text-xs font-bold text-gray-500 mt-6">
           Made With Love By Finland All Right Reserved
         </div>
       </div>
