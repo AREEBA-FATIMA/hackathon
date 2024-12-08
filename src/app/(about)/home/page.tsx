@@ -22,7 +22,7 @@ export default function AboutUs() {
         <h1 className="text-2xl font-bold text-gray-800">Bandage</h1>
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-600">
-          <li className="cursor-pointer font-semibold">Home</li>
+          <a href="/"><li className="cursor-pointer font-semibold">Home</li></a>
           <li className="cursor-pointer font-semibold">Product</li>
           <li className="cursor-pointer font-semibold">Pricing</li>
           <li className="cursor-pointer font-semibold">Contact</li>

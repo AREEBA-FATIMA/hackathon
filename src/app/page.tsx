@@ -61,7 +61,7 @@ export default function Home() {
 
           {/* Desktop View: Show Navigation Links */}
           <ul className="hidden md:flex font-semibold items-center text-gray-600 space-x-4">
-            <li><a href="#" className="hover:underline">Home</a></li>
+            <li><a href="/" className="hover:underline">Home</a></li>
 
             {/* Shop Dropdown */}
             <li>
