@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ClockIcon, ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/outline";
 
 export default function FeaturedPosts() {
@@ -56,11 +57,13 @@ export default function FeaturedPosts() {
             className="bg-white shadow-md overflow-hidden"
           >
             {/* Image Section */}
-            <div className="relative">
-              <img
+            <div className="relative w-full h-48">
+              <Image
                 src={post.image}
                 alt={post.title}
-                className="w-full h-48 object-cover"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-sm"
               />
               <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold uppercase px-2 py-1 rounded">
                 New
