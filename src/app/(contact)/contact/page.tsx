@@ -176,7 +176,7 @@ export default function AboutUs() {
 
             {/* Text */}
             <p className="text-gray-500 text-sm font-bold uppercase">
-            WE Can't WAIT TO MEET YOU
+            WE Can&apos;t WAIT TO MEET YOU
             </p>
             <h1 className="text-5xl font-bold text-gray-800">Let&rsquo;s Talk</h1> {/* Replaced '’' with &rsquo; */}
 
