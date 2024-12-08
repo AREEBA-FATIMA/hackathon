@@ -80,7 +80,7 @@ export default function Home() {
               </NavigationMenu>
             </li>
 
-            <li><a href="#" className="hover:underline">About</a></li>
+            <li><a href="/home" className="hover:underline">About</a></li>
             <li><a href="#" className="hover:underline">Blog</a></li>
             <li><a href="#" className="hover:underline">Contact</a></li>
             <li><a href="#" className="hover:underline">Pages</a></li>
