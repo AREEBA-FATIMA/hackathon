@@ -6,6 +6,7 @@ import { FiUser } from 'react-icons/fi'; // User Icon
 import { FaCartPlus } from 'react-icons/fa'; // Cart Icon
 import { FiHeart } from 'react-icons/fi'; // Heart Icon
 import { useState } from 'react'; // Import useState for toggling the menu
+import Link from 'next/link';  // Import Link from Next.js
 
 // Import Shadcn components for the dropdown navigation menu
 import {
@@ -15,7 +16,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";  // Adjust path based on your project structure
+} from "@/components/ui/navigation-menu";  
 import Editor from './[home]/editor/page';
 import Products from './[home]/products/page';
 import Vita from './[home]/vita/page';
@@ -61,7 +62,7 @@ export default function Home() {
 
           {/* Desktop View: Show Navigation Links */}
           <ul className="hidden md:flex font-semibold items-center text-gray-600 space-x-4">
-            <li><a href="/" className="hover:underline">Home</a></li>
+            <li><Link href="/" className="hover:underline">Home</Link></li>
 
             {/* Shop Dropdown */}
             <li>
@@ -80,10 +81,10 @@ export default function Home() {
               </NavigationMenu>
             </li>
 
-            <li><a href="/home" className="hover:underline">About</a></li>
-            <li><a href="#" className="hover:underline">Blog</a></li>
-            <li><a href="/contact" className="hover:underline">Contact</a></li>
-            <li><a href="#" className="hover:underline">Pages</a></li>
+            <li><Link href="/home" className="hover:underline">About</Link></li>
+            <li><Link href="#" className="hover:underline">Blog</Link></li>
+            <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+            <li><Link href="#" className="hover:underline">Pages</Link></li>
           </ul>
         </div>
 
@@ -91,10 +92,10 @@ export default function Home() {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 w-full bg-white shadow-md z-20 md:hidden">
             <ul className="space-y-4 p-4 text-gray-600 text-center">
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">Product</a></li>
-              <li><a href="#" className="hover:underline">Pricing</a></li>
-              <li><a href="#" className="hover:underline">Contact</a></li>
+              <li><Link href="#" className="hover:underline">Home</Link></li>
+              <li><Link href="#" className="hover:underline">Product</Link></li>
+              <li><Link href="#" className="hover:underline">Pricing</Link></li>
+              <li><Link href="#" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
         )}
@@ -104,7 +105,7 @@ export default function Home() {
           {/* User Icon and Login/Register */}
           <div className="hidden lg:flex items-center space-x-2">
             <FiUser className="text-[#45bbed]" />
-            <a href="#" className="hover:underline text-[#45bbed]">Login / Register</a>
+            <Link href="#" className="hover:underline text-[#45bbed]">Login / Register</Link>
           </div>
 
           {/* Search Icon in Blue */}
@@ -147,12 +148,12 @@ export default function Home() {
         <h2 className="text-sm font-semibold uppercase">Summer 2020</h2>
         <h1 className="text-5xl font-bold my-8 uppercase">New Collection</h1>
         <p className="mb-6">We know how large objects will act, <br /> but things on a small scale.</p>
-        <a
+        <Link
           href="#"
           className="bg-green-500 font-bold text-white py-2 px-4 rounded uppercase hover:bg-green-600"
         >
           Shop Now
-        </a>
+        </Link>
       </main>
       <Editor />
       <Products />

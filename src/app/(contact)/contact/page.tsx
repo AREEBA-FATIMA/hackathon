@@ -178,7 +178,7 @@ export default function AboutUs() {
             <p className="text-gray-500 text-sm font-bold uppercase">
             WE Can't WAIT TO MEET YOU
             </p>
-            <h1 className="text-5xl font-bold text-gray-800">Let’s Talk</h1>
+            <h1 className="text-5xl font-bold text-gray-800">Let&rsquo;s Talk</h1> {/* Replaced '’' with &rsquo; */}
 
             {/* Button */}
             <button className="flex items-center px-6 py-3 bg-[#14a2f5] text-white text-sm rounded-md font-medium w-fit mx-auto">
