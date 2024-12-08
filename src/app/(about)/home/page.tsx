@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/solid"; 
 import Team from "../team/page";
 import Companies from "../company/page";
@@ -22,10 +23,10 @@ export default function AboutUs() {
         <h1 className="text-2xl font-bold text-gray-800">Bandage</h1>
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-600">
-          <a href="/"><li className="cursor-pointer font-semibold">Home</li></a>
-          <li className="cursor-pointer font-semibold">Product</li>
-          <li className="cursor-pointer font-semibold">Pricing</li>
-          <li className="cursor-pointer font-semibold">Contact</li>
+            <Link href="./"><li className="cursor-pointer font-semibold">Home</li></Link>
+            <Link href=""><li className="cursor-pointer font-semibold">Product</li></Link>
+            <Link href=""><li className="cursor-pointer font-semibold">Pricing</li></Link>
+            <Link href="/contact"><li className="cursor-pointer font-semibold">Contact</li></Link>
         </ul>
 
         <div className="hidden lg:flex justify-between items-center text-base font-semibold">
