@@ -75,7 +75,7 @@ export default function Home() {
               <NavigationMenu>
                 <NavigationMenuList className="flex space-x-4">
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-base">Shop</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="text-base"><Link href='/shop'>Shop</Link></NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <NavigationMenuLink href="/tailor" className="block py-2 px-6 text-xs center">Product</NavigationMenuLink>
                       <NavigationMenuLink href="/pricing" className="block py-2 px-6 text-xs center">Pricing</NavigationMenuLink>

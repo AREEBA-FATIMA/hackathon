@@ -118,7 +118,7 @@ export default function PricingPage() {
         <div className="flex flex-wrap justify-center items-center mt-10 gap-4 md:gap-8">
           {companies.map((company, index) => (
             <div key={index} className="flex items-center justify-center">
-              <Image
+              <img
                 src={company.logo}
                 alt={company.name}
                 className="lg:mx-4"
