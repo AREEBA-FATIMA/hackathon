@@ -25,7 +25,7 @@ export default function AboutUs() {
         <ul className="hidden md:flex space-x-6 text-gray-600">
             <Link href="./"><li className="cursor-pointer font-semibold">Home</li></Link>
             <Link href=""><li className="cursor-pointer font-semibold">Product</li></Link>
-            <Link href=""><li className="cursor-pointer font-semibold">Pricing</li></Link>
+            <Link href="/pricing"><li className="cursor-pointer font-semibold">Pricing</li></Link>
             <Link href="#"><li className="cursor-pointer font-semibold">Contact</li></Link>
         </ul>
 
@@ -61,7 +61,7 @@ export default function AboutUs() {
           <ul className="space-y-4 text-gray-600">
             <Link href="./"><li className="cursor-pointer font-semibold">Home</li></Link>
             <Link href=""><li className="cursor-pointer font-semibold">Product</li></Link>
-            <Link href=""><li className="cursor-pointer font-semibold">Pricing</li></Link>
+            <Link href="/pricing"><li className="cursor-pointer font-semibold">Pricing</li></Link>
             <Link href="#"><li className="cursor-pointer font-semibold">Contact</li></Link>
           </ul>
         </div>

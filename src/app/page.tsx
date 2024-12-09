@@ -81,7 +81,7 @@ export default function Home() {
               </NavigationMenu>
             </li>
 
-            <li><Link href="/home" className="hover:underline">About</Link></li>
+            <li><Link href="/about" className="hover:underline">About</Link></li>
             <li><Link href="#" className="hover:underline">Blog</Link></li>
             <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             <li><Link href="#" className="hover:underline">Pages</Link></li>

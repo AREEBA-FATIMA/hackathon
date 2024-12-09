@@ -27,7 +27,7 @@ const Companies = () => {
               <Image
                 src={company.logo}
                 alt={company.name}
-                className="h-12 w-auto lg:px-4"
+                className="lg:mx-4"
                 width={80} 
                 height={30} 
               />

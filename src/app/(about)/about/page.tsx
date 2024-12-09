@@ -25,7 +25,7 @@ export default function AboutUs() {
         <ul className="hidden md:flex space-x-6 text-gray-600">
             <Link href="./"><li className="cursor-pointer font-semibold">Home</li></Link>
             <Link href=""><li className="cursor-pointer font-semibold">Product</li></Link>
-            <Link href=""><li className="cursor-pointer font-semibold">Pricing</li></Link>
+            <Link href="/pricing"><li className="cursor-pointer font-semibold">Pricing</li></Link>
             <Link href="/contact"><li className="cursor-pointer font-semibold">Contact</li></Link>
         </ul>
 
@@ -61,10 +61,10 @@ export default function AboutUs() {
       {isMenuOpen && (
         <div className="md:hidden bg-white absolute top-16 left-0 w-full px-6 py-4 shadow-lg">
           <ul className="space-y-4 text-gray-600">
-            <li className="cursor-pointer font-semibold">Home</li>
-            <li className="cursor-pointer font-semibold">Product</li>
-            <li className="cursor-pointer font-semibold">Pricing</li>
-            <li className="cursor-pointer font-semibold">Contact</li>
+            <Link href="./"><li className="cursor-pointer font-semibold">Home</li></Link>
+            <Link href=""><li className="cursor-pointer font-semibold">Product</li></Link>
+            <Link href="/pricing"><li className="cursor-pointer font-semibold">Pricing</li></Link>
+            <Link href="/contact"><li className="cursor-pointer font-semibold">Contact</li></Link>
           </ul>
         </div>
       )}
