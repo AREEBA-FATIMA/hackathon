@@ -29,14 +29,9 @@ import Footer from "../[home]/footer/page";
 
 const ShopSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleShopDropdown = () => {
-    setIsShopDropdownOpen(!isShopDropdownOpen);
   };
 
   const shopImages = [
