@@ -7,7 +7,7 @@ import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Footer from "@/app/[home]/footer/page";
 
-export default function AboutUs() {
+export default function ContactUs() {
   // State to toggle the mobile menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,7 +24,7 @@ export default function AboutUs() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-600">
             <Link href="./"><li className="cursor-pointer font-semibold">Home</li></Link>
-            <Link href=""><li className="cursor-pointer font-semibold">Product</li></Link>
+            <Link href="/tailor"><li className="cursor-pointer font-semibold">Product</li></Link>
             <Link href="/pricing"><li className="cursor-pointer font-semibold">Pricing</li></Link>
             <Link href="#"><li className="cursor-pointer font-semibold">Contact</li></Link>
         </ul>
@@ -58,9 +58,9 @@ export default function AboutUs() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white absolute top-16 left-0 w-full px-6 py-4 shadow-lg">
-          <ul className="space-y-4 text-gray-600">
+          <ul className="space-y-4 text-gray-600 text-center">
             <Link href="./"><li className="cursor-pointer font-semibold">Home</li></Link>
-            <Link href=""><li className="cursor-pointer font-semibold">Product</li></Link>
+            <Link href="/tailor"><li className="cursor-pointer font-semibold">Product</li></Link>
             <Link href="/pricing"><li className="cursor-pointer font-semibold">Pricing</li></Link>
             <Link href="#"><li className="cursor-pointer font-semibold">Contact</li></Link>
           </ul>

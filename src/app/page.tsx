@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Head from 'next/head';
 import { FaInstagram, FaTwitter, FaFacebookF, FaYoutube, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { IoMdSearch } from 'react-icons/io'; // Search Icon
@@ -26,10 +26,16 @@ import Footer from './[home]/footer/page';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage the hamburger menu
+  const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false); // State for mobile shop dropdown
 
   // Toggle the menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Toggle Shop dropdown in mobile view
+  const toggleShopDropdown = () => {
+    setIsShopDropdownOpen(!isShopDropdownOpen);
   };
 
   return (
@@ -69,12 +75,11 @@ export default function Home() {
               <NavigationMenu>
                 <NavigationMenuList className="flex space-x-4">
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="px-4 text-base">Shop</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="text-base">Shop</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <NavigationMenuLink href="#" className="block py-2 px-6 text-xs center">Men</NavigationMenuLink>
-                      <NavigationMenuLink href="#" className="block py-2 px-6 text-xs center">Women</NavigationMenuLink>
-                      <NavigationMenuLink href="#" className="block py-2 px-6 text-xs center">Kids</NavigationMenuLink>
-                      <NavigationMenuLink href="#" className="block py-2 px-6 text-xs center">Accessories</NavigationMenuLink>
+                      <NavigationMenuLink href="/tailor" className="block py-2 px-6 text-xs center">Product</NavigationMenuLink>
+                      <NavigationMenuLink href="/pricing" className="block py-2 px-6 text-xs center">Pricing</NavigationMenuLink>
+                      <NavigationMenuLink href="/contact" className="block py-2 px-6 text-xs center">Contact</NavigationMenuLink>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                 </NavigationMenuList>
@@ -92,10 +97,37 @@ export default function Home() {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 w-full bg-white shadow-md z-20 md:hidden">
             <ul className="space-y-4 p-4 text-gray-600 text-center">
-              <li><Link href="#" className="hover:underline">Home</Link></li>
-              <li><Link href="#" className="hover:underline">Product</Link></li>
-              <li><Link href="#" className="hover:underline">Pricing</Link></li>
-              <li><Link href="#" className="hover:underline">Contact</Link></li>
+              <li><Link href="#" className="hover:underline font-semibold">Home</Link></li>
+
+              {/* Mobile Shop Dropdown */}
+              <li className="relative">
+                <button 
+                  onClick={toggleShopDropdown} 
+                  className="flex justify-center w-full text-base hover:underline font-semibold"
+                >
+                  Shop
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`h-4 w-4 transform ${isShopDropdownOpen ? 'rotate-180' : ''}`}
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path fillRule="evenodd" d="M5.293 9.707a1 1 0 011.414 0L10 13.414l3.293-3.707a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+                {isShopDropdownOpen && (
+                  <ul className="pl-4 mt-2 space-y-2">
+                    <li><Link href="/tailor" className="hover:underline">Product</Link></li>
+                    <li><Link href="/pricing" className="hover:underline">Pricing</Link></li>
+                    <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+                  </ul>
+                )}
+              </li>
+
+              <li><Link href="/about" className="hover:underline font-semibold">About</Link></li>
+              <li><Link href="#" className="hover:underline font-semibold">Blog</Link></li>
+              <li><Link href="/contact" className="hover:underline font-semibold">Contact</Link></li>
+              <li><Link href="#" className="hover:underline font-semibold">Pages</Link></li>
             </ul>
           </div>
         )}
@@ -124,15 +156,16 @@ export default function Home() {
             <FiHeart className="text-[#45bbed]" />
             <span className="text-[#45bbed]">1</span>
           </div>
+          
           {/* Mobile View: Show Hamburger Icon */}
-        <div className="md:hidden flex items-center">
-          {/* Hamburger Icon */}
-          <button onClick={toggleMenu} className="text-[#45bbed]">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+          <div className="md:hidden flex items-center">
+            {/* Hamburger Icon */}
+            <button onClick={toggleMenu} className="text-[#45bbed]">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
 
