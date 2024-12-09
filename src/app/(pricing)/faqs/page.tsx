@@ -49,7 +49,7 @@ export default function PricingFaq() {
         </div>
 
         <p className="text-center mt-16">
-          Haven't got your answer? <Link href="#">Contact our support</Link>
+          Haven&apos;t got your answer? <Link href="#">Contact our support</Link>
         </p>
       </div>
 
